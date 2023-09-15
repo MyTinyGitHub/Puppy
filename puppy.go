@@ -1,9 +1,19 @@
-package Puppy 
+package Puppy
 
-func Bark() string { 
-  return "Woof!"
-}  
+import "github.com/MyTinyGitHub/dog"
+
+func Bark() string {
+	return "Woof!"
+}
 
 func Barks() string {
-  return "Woof! Woof! Woof!"
+	return "Woof! Woof! Woof!"
+}
+
+func BigBark() string {
+	return dog.WhenGrownUp(Bark())
+}
+
+func BigBarks() string {
+  return dog.WhenGrownUp(Barks())
 }
